@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Custom Docker Image Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>🚀 Automated Custom Docker Image Generator</h1>
+
+<div class="builder-card">
+
+<div class="input-group">
+
+<label>Programming Language</label>
+
+<select id="language">
+
+<option value="python">Python</option>
+<option value="node">Node.js</option>
+<option value="java">Java</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Framework</label>
+
+<select id="framework">
+
+<option value="flask">Flask</option>
+<option value="express">Express</option>
+<option value="springboot">Spring Boot</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Database</label>
+
+<select id="database">
+
+<option value="mysql">MySQL</option>
+<option value="postgres">PostgreSQL</option>
+<option value="mongo">MongoDB</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Additional Services</label>
+
+<div class="services">
+
+<label><input type="checkbox" value="redis"> Redis</label>
+
+<label><input type="checkbox" value="nginx"> Nginx</label>
+
+<label><input type="checkbox" value="apache"> Apache</label>
+
+</div>
+
+</div>
+
+<button id="buildBtn" onclick="buildImage()">
+
+⚙️ Build Docker Image
+
+</button>
+
+</div>
+
+<div class="console">
+
+<h2>Build Status</h2>
+
+<div id="output">
+
+Waiting for build request...
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
