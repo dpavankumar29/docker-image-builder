@@ -11,15 +11,18 @@ app.post('/build',async(req,res)=>{
 
 const {language,framework,database,services}=req.body
 
-console.log("Build Request:",req.body)
+console.log("Build Request:",{
+language,
+framework,
+database,
+services
+})
 
 try{
 
 await builder.buildImage(language,framework,database,services)
 
-res.json({
-message:"✅ Docker Image Built Successfully"
-})
+res.json({message:"Docker Image Built Successfully"})
 
 }
 
@@ -27,9 +30,7 @@ catch(err){
 
 console.log(err)
 
-res.json({
-message:"❌ Docker Build Failed"
-})
+res.json({message:"Docker Build Failed"})
 
 }
 
